@@ -1,0 +1,62 @@
+# GetMag v1.0.0 — Initial Public Release
+Release Date: 2025‑12‑25
+
+## Overview
+This is the first public release of GetMag, a desktop automation tool designed to capture, organize, and manage magazine‑style content.  
+The source code is fully open source under GPLv3.  
+Binary distributions include an Acceptable Use Agreement (AUA) that must be accepted during installation.
+
+---
+
+## Downloads
+- **GetMag Installer (Windows)**  
+  getMagSetup.exe
+
+- **Source Code**  
+  Provided automatically by GitHub under “Source code (zip)” and “Source code (tar.gz)”.
+
+---
+
+## Changes in This Version
+
+### Added
+- Initial release of the GetMag automation engine.
+- Configurable workflow system with user‑defined automation steps.
+- Local‑only processing with no cloud dependencies.
+- Inno Setup installer with AUA click‑through.
+- Documentation including README, NOTICE, CONTRIBUTING, and CHANGELOG.
+
+### Changed
+- N/A — first public release.
+
+### Fixed
+- N/A — first public release.
+
+---
+
+## Acceptable Use Agreement (AUA)
+Binary versions of GetMag include an Acceptable Use Agreement that must be accepted during installation.
+
+The AUA requires:
+- Legal and ethical use only  
+- No copyright infringement  
+- No unauthorized scraping or data harvesting  
+- No bypassing DRM or access controls  
+- No violating website terms of service  
+- No unlawful or harmful automation  
+
+The AUA does **not** modify your GPLv3 rights for the source code.
+
+Full text: See `AUA.txt` in the repository or the installer.
+
+---
+
+## License
+The source code for GetMag is licensed under the **GNU General Public License v3.0 (GPLv3)**.  
+See the `LICENSE` file for full details.
+
+Binary distributions may include additional terms (AUA) governing acceptable use.
+
+---
+
+## Checksums (Optional)
