@@ -1,0 +1,18 @@
+getMag — Open Source Notice
+Copyright (c) 2025 Ottawa Moose Software Solutions
+
+This project includes the source code for GetMag, which is licensed under the
+GNU General Public License v3.0 (GPLv3). A complete copy of the GPLv3 license
+is provided in the LICENSE file.
+
+The GPLv3 license applies to all source code contained in this repository.
+
+Binary distributions of getMag (including installers and compiled executables)
+may include an additional Acceptable Use Agreement (AUA). The AUA governs the
+legal and ethical use of the compiled software and includes terms regarding
+responsible use, warranty disclaimers, and limitations of liability. The AUA
+does not modify or restrict your rights under the GPLv3 with respect to the
+source code.
+
+This NOTICE file is provided for clarity and does not replace or modify the
+terms of the GPLv3 license.
