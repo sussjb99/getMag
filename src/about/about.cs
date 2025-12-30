@@ -76,14 +76,14 @@ public class AboutForm : Form
 
         y += 100;
         AddLabel("Credits:", 20, y, bodyFont); 
-        AddLabel("AutoIt, InnoSetup", 130, y, bodyFont);
+        AddLabel("pdfsharp, InnoSetup", 130, y, bodyFont);
         
         // --- Links Section ---
         AddLabel("Support:", 20, y + 25, bodyFont);
-        AddLink("https://ottawamoose8.wordpress.com/contact-ottawa-moose/", 130, y + 25);
+        AddLink("https://ottawamoosesoftwaresolutions8.wordpress.com/contact/", 130, y + 25);
 
         AddLabel("Website:", 20, y + 50, bodyFont);
-        AddLink("https://ottawamoose8.wordpress.com", 130, y + 50);
+        AddLink("https://ottawamoosesoftwaresolutions8.wordpress.com/", 130, y + 50);
 
         // --- OK Button ---
         Button btnOk = new Button();
