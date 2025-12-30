@@ -6,7 +6,6 @@ The **Update Checker Utility** is a standalone Windows Forms executable responsi
 
 ## 🛠 Core Responsibilities
 
-- **Remote Version Retrieval**
 - **Remote Version Retrieval**  
   Contacts the GitHub API to fetch the latest published version number stored in the repository.
 
@@ -38,4 +37,5 @@ The update checker retrieves the latest version number from a file stored in the
 https://api.github.com/repos/sussjb99/getMag/contents/src/check_for_update/current_version
 
 
+
 
