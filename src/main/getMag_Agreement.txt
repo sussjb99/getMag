@@ -1,0 +1,39 @@
+getMag Acceptable Use Agreement (Short Version)
+Last Updated: 2025-12-22
+
+IMPORTANT: By clicking "I Agree," installing, or using this software, you accept all terms below. If you do not agree, select "I Do Not Agree" and the installation will stop.
+
+1. Legal and Ethical Use Only
+You must use getMag only in a lawful and ethical manner. You may NOT use the software to:
+- Violate copyright or intellectual property rights.
+- Access, download, or copy content you do not have permission to use.
+- Bypass DRM or other access controls.
+- Violate website terms of service or automated access restrictions.
+- Perform unauthorized scraping or data harvesting.
+- Violate privacy laws or any applicable regulations.
+You are fully responsible for ensuring your use is legal in your own jurisdiction.
+
+2. No Warranty
+The software is provided "AS IS," without any warranty. There is no guarantee of accuracy, reliability, performance, or fitness for any purpose. You assume all risks.
+
+3. Limitation of Liability
+The author is not liable for any damages, losses, or legal consequences arising from your use or misuse of the software, including:
+- Data loss
+- System issues
+- Business interruption
+- Legal penalties
+- Copyright or access violations
+You alone are responsible for your actions.
+
+4. User Responsibility
+You must ensure your use complies with all laws, regulations, and third‑party terms. You are solely responsible for any legal consequences resulting from your actions. The author does not provide legal advice.
+
+5. Termination
+Your rights to use the binary distribution end immediately if you violate this Agreement. You must then stop using the software and delete all copies. Your GPLv3 rights to the source code remain unaffected.
+
+6. Governing Law
+This Agreement shall be governed by and interpreted in accordance with the laws of the Province of Ontario and the laws of Canada applicable therein, without regard to conflict‑of‑law principles.
+
+You are solely responsible for ensuring that your use of the Software complies with all laws, regulations, and requirements applicable in your own jurisdiction. Use of the Software in jurisdictions where such use is unlawful is strictly prohibited.
+
+By clicking "I Agree," you confirm that you understand and accept these terms.
