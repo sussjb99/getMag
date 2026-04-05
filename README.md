@@ -1,87 +1,112 @@
-# getMag
+# Drive Baby Sitter – Integrity Suite
 
-getMag is an open‑source desktop automation tool designed to simplify the process of capturing, organizing, and managing magazine‑style content from various sources. It provides a streamlined workflow for users who need to automate repetitive capture tasks while maintaining full control over their local environment.
+Drive Baby Sitter is a maintenance and monitoring toolkit designed to keep external storage devices healthy over long periods of time. It performs two major categories of checks:
 
-This repository contains the complete open‑source source code for getMag.  
-Binary releases (installers and executables) may include additional terms governing acceptable use.
+- **File Integrity (Bit‑Rot Detection)**
+- **Surface Analysis (Performance & Stability Scans)**
+
+The suite works with USB flash drives, portable HDDs/SSDs, and other removable storage devices. It never modifies files unless you explicitly choose to run a recovery procedure.
 
 ---
 
 ## Features
 
-- Automated capture and organization of magazine‑style content  
-- Configurable workflows and customizable automation steps  
-- Local‑only processing (no cloud dependencies)  
-- Lightweight, fast, and designed for reliability  
-- Fully open source under GPLv3
+### 🔍 Device Information
+Displays detailed information about the currently mounted drive:
+
+- Device model  
+- Hardware serial number  
+- Drive letter  
+- Filesystem type (FAT32, exFAT, NTFS, etc.)  
+- Storage technology (Flash, HDD, SSD, Unknown)  
+- SMART health (if supported)
+
+### 📦 Capacity Validation
+Validates whether the drive’s reported capacity matches its actual usable capacity.  
+This helps detect counterfeit or defective flash drives that silently discard data once their true limit is exceeded.
+
+During a **Full Surface Scan**, the suite writes controlled test files across free space and reads them back to verify:
+
+- All regions of the drive are real and readable  
+- No hidden capacity limits  
+- No controller failures  
+- No unstable regions under load
+
+### 🧬 File Integrity (Bit‑Rot Detection)
+The suite maintains a cryptographic baseline of all files, including:
+
+- File paths  
+- File sizes  
+- Timestamps  
+- Hash values  
+
+It detects:
+
+- **New files**  
+- **Deleted files**  
+- **Modified files**  
+- **Corrupted files (bit rot)** — files whose hash value has changed even though the timestamp is the same.
+
+If PAR2 recovery data exists, the suite can automatically repair corrupted files.  
+Recovered files are written back safely, and corrupted originals are preserved with a `.1` suffix.
+
+### 📊 Surface Scans
+
+#### Quick Surface Scan
+Reads a small sample of the drive to estimate stability and performance.
+
+#### Full Surface Scan
+Performs a full read/write validation across the drive’s free space.  
+This is the most thorough test and is especially effective at detecting:
+
+- Fake‑capacity flash drives  
+- Failing flash cells  
+- Misreporting controllers  
+- Unstable regions under load
 
 ---
 
-## License
+## Tasks Overview
 
-This project is licensed under the **GNU General Public License v3.0 (GPLv3)**.
+### 1. Scan for Bit Rot
+Compares all files against the stored baseline and detects new, deleted, modified, or corrupted files.
 
-- The full license text is available in the `LICENSE` file.
-- All source code in this repository is covered by the GPLv3.
-- You are free to view, modify, and redistribute the source code under the terms of the GPLv3.
+### 2. Update File Baseline
+Creates or updates the integrity baseline.
 
-Binary distributions of GetMag (including installers and compiled executables) may include an additional **Acceptable Use Agreement (AUA)**.  
-The AUA governs the legal and ethical use of the compiled software and includes terms regarding responsible use, warranty disclaimers, and limitations of liability.  
-The AUA does **not** modify or restrict your GPLv3 rights with respect to the source code.
+### 3. Re‑Generate Recovery Data
+Creates or updates PAR2 recovery files for future repair operations.
 
-For clarity, see the `NOTICE` file.
+### 4. Quick Surface Scan
+Fast stability and performance sampling.
 
----
-
-## Acceptable Use (Binary Distributions Only)
-
-If you download or use the compiled installer or executable versions of getMag, you must agree to the Acceptable Use Agreement presented during installation.
-
-In summary, the AUA requires:
-
-- Legal and ethical use only  
-- No copyright infringement  
-- No unauthorized scraping or data harvesting  
-- No bypassing DRM or access controls  
-- No violating website terms of service  
-- No unlawful or harmful automation  
-- You assume all risk and responsibility for your actions  
-
-The full text is included in the installer and in the repository under `AUA.txt` (if you choose to include it).
+### 5. Full Surface Scan
+Sequential read/write validation across all free space.
 
 ---
 
-## Building From Source
+## Recommended Usage
 
-To build GetMag from source:
+- **New installations:**  
+  Update File Baseline → Re‑Generate Recovery Data
 
-1. Clone this repository  
-2. Open the project in your preferred development environment  
-3. Build using your standard toolchain  
+- **Before retrieving data:**  
+  Run Scan for Bit Rot
 
-(You can expand this section later with exact build steps for C#, C++, Python, or whatever languages you use.)
+- **Routine health checks:**  
+  - Quick Surface Scan monthly  
+  - Full Surface Scan every 6 months or after unexpected disconnects
 
----
-
-## Contributing
-
-Contributions are welcome.  
-By submitting code, you agree that your contributions will be licensed under the GPLv3.
-
-See `CONTRIBUTING.md` for details.
+- **Whenever drive contents change:**  
+  Update File Baseline + Re‑Generate Recovery Data
 
 ---
 
-## Disclaimer
+## Notes
 
-The software is provided **“AS IS”**, without warranty of any kind.  
-You assume all risks associated with using the software.
-
-See the LICENSE and AUA for full details.
+- Flash drives wear out over time — regular scans help detect early failure.  
+- Bit rot can affect any storage device; the integrity baseline allows detection of even single‑bit corruption.  
+- PAR2 recovery data is optional but strongly recommended for archival drives.  
+- Capacity validation protects against counterfeit or defective flash drives.
 
 ---
-
-## Contact
-
-For questions, suggestions, or feedback, please open an issue on GitHub.
-
